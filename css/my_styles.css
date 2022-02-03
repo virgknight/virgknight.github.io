@@ -28,6 +28,51 @@
 
 
 
+/* Projects */
+@media (min-width: 992px) {
+    .projects-section .pint-text {
+        padding: 0 2rem 0 0;
+        border-right: 0.5rem solid #64a19d;
+        border-left: none;
+    }
+}
+
+.project-img-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-img-wrapper > .project-tech-content {
+    position: absolute;
+    inset: 0;
+    font-size: 1.5rem;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255, 0.4);
+    opacity: 0;
+    text-align: center;
+}
+
+.project-img-wrapper > img, .project-img-wrapper > .project-tech-content {
+    transition: 200ms ease-in-out;
+}
+
+.project-img-wrapper:hover > .project-tech-content {
+    opacity: 1;
+}
+
+.project-img-wrapper:hover > img {
+    filter: blur(5px);
+}
+
+.project-img-wrapper .project-tech-content i {
+    display: inline-block;
+    font-size: 4rem;
+    margin: 0.5rem;
+}
 
 /* Technologies */
 .tech-section {
@@ -66,6 +111,10 @@
     margin-bottom: 2rem;
 }
 
+.floating-text p {
+    margin-bottom: 1rem;
+}
+
 .italicized {
     font-style: italic;
 }
@@ -77,10 +126,15 @@
   background: whitesmoke;
   border-radius: 100%;
   line-height: 4rem;
+  transition-duration: 0.5s;
 }
 
 .card-socials a  .social-icon {
     width: 1.5em;
     height: 1.5em;
     vertical-align: -0.5em;
+}
+
+.card-socials a:hover {
+    transform: scale(1.2);
 }
