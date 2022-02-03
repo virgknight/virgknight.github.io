@@ -3,6 +3,39 @@
     display: none;
 }
 
+/* Splash */
+.fade-in-up {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    animation-duration: 0.8s;
+    -webkit-animation-duration: 0.8s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,50%,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,50%,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
 /* About me */
 .headshot {
     border-radius: 12px;
@@ -102,8 +135,25 @@
     transition: all .2s ease-in-out; 
 }
 
+.tech-icons i span {
+    position: absolute;
+    font-size: 1.1rem;
+    font-weight: 700;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    visibility: hidden;
+    transition: all .2s ease-in-out;
+    text-shadow: 0 0 4px rgba(0,0,0,0.45);
+    font-family: var(--bs-body-font-family);
+}
+
 .tech-icons i:hover {
     transform: scale(1.2);
+}
+
+.tech-icons i:hover span {
+    visibility: visible;
 }
 
 .lightly-shadowed {
