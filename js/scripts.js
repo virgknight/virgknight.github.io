@@ -7,6 +7,47 @@
 // Scripts
 // 
 
+// Code adapted/modified from Simon Shahriveri's JS Typewriter: https://codepen.io/hi-im-si/pen/ALgzqo
+const TxtType = function(el, toRotate) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = 5000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '{ ' + this.txt + ' }';
+
+    var that = this;
+    // time to wait before next iteration
+    var delta = 150 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+    }
+
+    setTimeout(function() { that.tick(); }, delta);
+};
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
@@ -56,5 +97,9 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
+
+    const navBarBrandText = ["name: 'Virginia Knight'", "occupation: 'Software Developer'", "location: 'Phoenix, AZ'"];
+    const navBrandName = document.body.querySelector('.nav-brand-name');
+    new TxtType(navBrandName, navBarBrandText);
 
 });
