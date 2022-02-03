@@ -7962,6 +7962,15 @@ textarea.form-control-lg {
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
+.text-white-51 {
+  --bs-text-opacity: 1;
+  color: rgba(255, 255, 255) !important;
+}
+
+.text-white-51.shadowed {
+  text-shadow: rgb(0 0 0 / 45%) 0px 0px 4px;
+}
+
 .text-reset {
   --bs-text-opacity: 1;
   color: inherit !important;
@@ -11521,10 +11530,10 @@ body {
   #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.75);
   }
   #mainNav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.95);
   }
   #mainNav .nav-link:active {
     color: #fff;
@@ -11572,7 +11581,9 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/lena.jpg"); */
+  background-image: url("../assets/img/moher-masthead.jpg");
+  /* background-image: url("../assets/img/hike-masthead.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11583,7 +11594,7 @@ body {
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1));
+  background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
@@ -11609,17 +11620,17 @@ body {
     letter-spacing: 0.8rem;
   }
   .masthead h2, .masthead .h2 {
-    max-width: 30rem;
+    max-width: 35rem;
     font-size: 1.25rem;
   }
 }
 
 .about-section {
-  padding-top: 10rem;
-  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 .about-section p {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 .projects-section {

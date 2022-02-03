@@ -3,6 +3,29 @@
     display: none;
 }
 
+/* About me */
+.headshot {
+    border-radius: 12px;
+    box-shadow: 0px 0px 6px -6px rgb(255,255,255,0.7);
+}
+
+.about-section .btn-resume {
+    margin-bottom: 1rem;
+    background-color: #a3a2b0;
+}
+
+.about-section .btn-resume:hover {
+    background-color: #6b6b75;
+    color: whitesmoke;
+}
+
+.about-section a {
+    color: white;
+}
+
+.about-section a:hover {
+    color: #a3a2b0;
+}
 
 /* Projects */
 @media (min-width: 992px) {
@@ -48,6 +71,14 @@
     display: inline-block;
     font-size: 4rem;
     margin: 0.5rem;
+}
+
+.proj-btn {
+    margin: 1rem 0;
+}
+
+.proj-btn:hover {
+    background-color: whitesmoke;
 }
 
 /* Technologies */
