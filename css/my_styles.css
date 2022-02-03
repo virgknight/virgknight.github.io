@@ -61,6 +61,10 @@
 }
 
 /* Projects */
+.extra-bottom-margin {
+    margin-bottom: 10rem !important;
+}
+
 @media (min-width: 992px) {
     .projects-section .pint-text {
         padding: 0 2rem 0 0;
@@ -72,6 +76,7 @@
 .project-img-wrapper {
     position: relative;
     overflow: hidden;
+    border-radius: 8px;
 }
 
 .project-img-wrapper > .project-tech-content {
