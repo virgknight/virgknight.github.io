@@ -13,15 +13,18 @@ window.addEventListener('DOMContentLoaded', event => {
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
         const navbarBrand = document.body.querySelector('.navbar-brand');
+        const navBrandName = document.body.querySelector('.nav-brand-name');
         if (!navbarCollapsible) {
             return;
         }
         if (window.scrollY === 0) {
             navbarCollapsible.classList.remove('navbar-shrink');
             navbarBrand.classList.add('hidden');
+            navBrandName.classList.remove('typewriter');
         } else {
             navbarCollapsible.classList.add('navbar-shrink');
             navbarBrand.classList.remove('hidden');
+            navBrandName.classList.add('typewriter');
         }
 
     };
