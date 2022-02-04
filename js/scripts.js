@@ -98,7 +98,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    const navBarBrandText = ["name: 'Virginia Knight'", "occupation: 'Software Developer'", "location: 'Phoenix, AZ'"];
+    const navBarBrandText = ["name: 'Virginia Knight'", "occupation: 'Software Developer'", "location: 'Scottsdale, AZ'"];
     const navBrandName = document.body.querySelector('.nav-brand-name');
     new TxtType(navBrandName, navBarBrandText);
 
