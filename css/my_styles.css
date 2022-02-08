@@ -14,6 +14,16 @@
     -webkit-animation-fill-mode: both;
 }
 
+h2.fade-in-up {
+    animation-delay: 0.4s;
+    -webkit-animation-delay: 0.4s;
+}
+
+a.fade-in-up {
+    animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
+}
+
 @keyframes fadeInUp {
     from {
         transform: translate3d(0,50%,0)
