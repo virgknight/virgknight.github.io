@@ -11582,8 +11582,8 @@ body {
   min-height: 35rem;
   padding: 15rem 0;
   /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/lena.jpg"); */
-  /* background-image: url("../assets/img/moher-masthead.jpg"); */
-  background-image: url("../assets/img/hike-masthead.jpg");
+  background-image: url("../assets/img/moher-masthead.jpg");
+  /* background-image: url("../assets/img/hike-masthead.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
